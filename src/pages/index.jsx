@@ -1,0 +1,7 @@
+export {default as Home} from './Public/Home'
+export {default as Login} from './Login'
+export {default as ForgotPassword} from './ForgotPassword'
+export {default as Fail} from './Fail'
+export {default as NEW} from './NEW'
+export {default as ProductDetail} from './ProductDetail'
+export {default as Payment} from './Payment'
