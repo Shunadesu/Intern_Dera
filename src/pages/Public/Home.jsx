@@ -7,21 +7,21 @@ import { Link } from 'react-router-dom';
 import { HomeBar, NavBanner, Navbar, Slider,WProducts,NewArrival,ShopBanner, WhyBanner, SubcribeBanner, Footer,Popup } from '../../components'
 import path from '../../Ulities/path';
 
+import { motion } from "framer-motion"
+
 const Home = () => {
 
   const {IoIosArrowRoundForward, MdClose, FaTicketAlt, IoChatbubblesOutline} = icons
   const { id } = useParams();
   const selectedProduct = productNew.find(product => product.id === parseInt(id));
   const [cartItems, setCartItems] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(selectedProduct ? selectedProduct.price : 0);
-    const [quantity, setQuantity] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(selectedProduct ? selectedProduct.price : 0);
+  const [quantity, setQuantity] = useState(1);
 
     const handleQuantityChange = (newQuantity) => {
         setQuantity(newQuantity);
         setTotalPrice(selectedProduct ? selectedProduct.price * newQuantity : 0);
     };
-
-    
 
     const addToCart = () => {
       const newItem = {
@@ -60,9 +60,15 @@ const Home = () => {
     <div className='w-[1440px] flex flex-col m-auto relative'>
       <>
       {showPopup && 
-      <div>
-          <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 z-10"></div>
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-10">
+      <div className='w-full'>
+        <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 z-10"></div>
+        <motion.div 
+        className="fixed inset-0 flex items-center justify-center z-20"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.5 }}
+        transition={{ duration: 0.5 }}
+        >
           <div className='flex w-[800px] relative bg-white rounded-2xl shadow-lg'>
             <div className='w-[500px] h-[500px]'>
             <img src={popup} alt="" className='w-full h-full object-cover rounded-tl-2xl rounded-bl-2xl'/>
@@ -71,19 +77,22 @@ const Home = () => {
               <h1 className='font-heading_1 text-[20px] font-bold'> Get 15% off </h1>
               <p className='text-[#666666]'>On your initial purchase of our chosen products</p>
               <Link to={path.NEWS}>
-                  <div className='text-[#685c] text-[18px]'>Show Now</div>
+                  <div className='text-[#658C4A] text-[18px] cursor-pointer font-semibold rounded-full px-4 py-2 border border-[#E7CEC0] bg-[#E7CEC0]
+                  hover:bg-[#658C4a] hover:text-[#E7CEC0]
+                  transition-all duration-500
+                  '>Show Now</div>
               </Link>
             </div>
             <div
             className='absolute top-5 right-5 cursor-pointer rounded-full p-2 bg-white
-            hover:bg-[#685c] hover:text-white
+            hover:bg-[#658C4A] hover:text-white
             transition-all duration-500
             '
             onClick={() =>  setShowPopup(!showPopup)}>
               <MdClose size={22}/>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       } 
       </>
@@ -124,11 +133,11 @@ const Home = () => {
       />
       <Navbar />
       <Slider />
-      <NavBanner />
-      <WProducts />
-      <NewArrival />
+      <NavBanner/>
+      <WProducts/>
+      <NewArrival/>
       <ShopBanner />
-      <WhyBanner />
+      <WhyBanner/>
       <SubcribeBanner/>
       <Footer />
     </div>

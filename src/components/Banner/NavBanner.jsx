@@ -8,9 +8,10 @@ import accesories from '../../image/image3_accessories.png'
 import furniture from '../../image/imag3_furniture.png'
 import HomeGoods from '../../image/image5_homegidohi.png'
 
-const NavBanner = () => {
+const NavBanner = ({controls}) => {
   return (
-    <div className='w-full flex bg-white px-16 items-center my-32 gap-4 justify-center text-white font-semibold'>
+    <div 
+    className='w-full flex bg-white px-16 items-center my-32 gap-4 justify-center text-white font-semibold'>
         <Link to={path.CLOTHING}>
             <div className='w-[424px] h-[424px] relative hover:opacity-90'>
                 <img src={clothing} alt="" className='w-full h-full object-cover rounded-lg'/>
