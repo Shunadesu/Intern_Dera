@@ -5,6 +5,8 @@ const path = {
     LOGIN: '/login',
     REGISTER: '/register',
     FORGOTPASSWORD: '/forgotpassword',
+    RESETPASSWORD: '/resetpassword',
+
     //Nav bar
     NEWS: '/news',
     CLOTHING: '/clothing',

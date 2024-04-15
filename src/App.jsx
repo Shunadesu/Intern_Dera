@@ -1,5 +1,5 @@
 import React from 'react';
-import {Home,Login, ForgotPassword, Fail, NEW, ProductDetail, Payment} from './pages';
+import {Home,Login, ForgotPassword, Fail, NEW, ProductDetail, Payment, ResetPassword} from './pages';
 
 import path from './Ulities/path';
 
@@ -27,6 +27,7 @@ function App() {
           <Route path={path.NEWS} element={ <NEW />} />
           <Route path={path.PRODUCTDETAIL} element={<ProductDetail/>} />
           <Route path={path.PAYMENT} element={<Payment/>}/>
+          <Route path={path.RESETPASSWORD} element={<ResetPassword/>}></Route>
         </Routes>
     </div>
   );
