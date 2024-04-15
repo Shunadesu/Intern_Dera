@@ -35,3 +35,5 @@ export {default as Cmting} from '../components/Voting/Cmting'
 export {default as PaymentD} from './PaymentD'
 export {default as AccountPayment} from './Payment/AccountPayment'
 export {default as ProductPayment} from './Payment/ProductPayment'
+
+export {default as Popup} from './Popup/Popup'

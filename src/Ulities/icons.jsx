@@ -7,8 +7,9 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 import { CiUser, CiShoppingCart } from "react-icons/ci";
 import { FiTrash, FiPlus, FiMinus } from "react-icons/fi";
 import { BsBank2 } from "react-icons/bs";
-
+import { IoChatbubblesOutline } from "react-icons/io5";
 import { BiLike } from "react-icons/bi";
+
 const icons = {
     GoHomeFill,
     FaRegCheckCircle,
@@ -42,6 +43,7 @@ const icons = {
     FaMoneyBillWave,
     BsBank2,
     FaTicketAlt,
+    IoChatbubblesOutline,
 }
 
 export default icons
