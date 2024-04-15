@@ -39,11 +39,12 @@ const Home = () => {
     }, [setCartItems]);
 
   return (
-    <div className='w-[1780px] flex flex-col m-auto '>
+    <>
       <div className='w-full bg-[#658C4A] h-[60px] p-4 flex justify-center items-center text-white gap-2'>
         <p className='text-[16px]'>Free Shipping with minimum purchase Rp250.000</p>
         <IoIosArrowRoundForward size={30} className='font-bold'/>
       </div>
+    <div className='w-[1440px] flex flex-col m-auto '>
       <HomeBar 
           id={id}
           selectedProduct={selectedProduct}
@@ -66,6 +67,7 @@ const Home = () => {
       <SubcribeBanner/>
       <Footer />
     </div>
+    </>
   )
 }
 

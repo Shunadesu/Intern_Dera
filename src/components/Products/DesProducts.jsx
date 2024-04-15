@@ -60,10 +60,10 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
     };
 
     return (
-        <div className='flex justify-between items-start p-32'>
+        <div className='flex justify-between items-start gap-8 px-32 py-16'>
             <div className='flex flex-col flex-1 gap-4 p-4 w-[600px] justify-center items-center'>
                 <div className='w-full flex justify-center items-center'>
-                    <div className='w-[600px] h-[600px]'>
+                    <div className='w-[500px] h-[500px]'>
                         <img src={img} alt="" className='w-full h-full object-cover' />
                     </div>
                 </div>
@@ -74,7 +74,7 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
                     px-2 py-[4rem] w-full h-full bg-white rounded-xl border border-gray-300 cursor-pointer'>
                         <MdNavigateBefore size={24}/>
                     </div>
-                    <div className='w-[500px]'>
+                    <div className='w-[400px]'>
                         <Slider ref={sliderRef} {...settings}>
                             <div className='h-[200px] px-2' >
                                 <img src={img} alt="" className='w-full h-full object-contain' />
@@ -106,7 +106,7 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
                 </div>
                 </div>
             <div className='flex flex-col gap-4 flex-1'>
-                <div className='uppercase font-bold text-[32px] text-[#333333] '>
+                <div className='uppercase font-bold text-[28px] text-[#333333] '>
                     {name}
                 </div>
                 <div className='text-[#333333]'>
@@ -129,21 +129,21 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
                 </div>
                 <div className='flex gap-6 items-center'>
                     <div className='flex flex-col gap-2 justify-center'>
-                        <div className='text-[32px] font-bold text-[#658C4A]'>
+                        <div className='text-[28px] font-bold text-[#658C4A]'>
                             {formatPrice(price)}
                         </div>
-                        <div  className='text-[18px] text-[#191919]'>
+                        <div  className='text-[16px] text-[#191919]'>
                             Save: {formatPrice(price*(1-0.5))}
                         </div>
                     </div>
-                    <div className='text-[18px] text-[#191919]'>
+                    <div className='text-[16px] text-[#191919]'>
                         <del>
                             {formatPrice(price*(1+0.5))}
                         </del>                    
                     </div>
                 </div>
                 <div className='flex flex-col gap-4'>
-                    <h1 className='uppercase text-[#333333] font-bold text-[18px]'>
+                    <h1 className='uppercase text-[#333333] font-bold text-[16px]'>
                         incentives 
                     </h1>
                     <div className='px-6 flex gap-4 items-center'>
@@ -152,7 +152,7 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
                     </div>
                 </div>
                 <div className='flex flex-col gap-4'>
-                    <h1 className='uppercase text-[#333333] font-bold text-[18px]'>
+                    <h1 className='uppercase text-[#333333] font-bold text-[16px]'>
                         quantity
                     </h1>
                     <QuantityInput initialValue={quantity} onChange={handleQuantityChange} />

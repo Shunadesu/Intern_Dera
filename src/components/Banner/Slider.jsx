@@ -20,7 +20,7 @@ const Slider = () => {
   return (
     <div className='w-full h-[500px] flex gap-2 m-auto border-t-2 border-[#658C4A]'>
         <div className='flex-1 flex justify-center items-center '>
-            <div className='flex flex-col gap-6 justify-center px-32'>
+            <div className='flex flex-col gap-6 justify-center px-16'>
                 <h1 className='text-[62px] font-bold font-heading_1'>Healthy cutlery, healthy body</h1>
                 <h4 className='text-[20px] pr-32'>Upgrade your dining experience and begin your path to a healthy you right now</h4>
                 <Link

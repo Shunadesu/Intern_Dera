@@ -11,7 +11,7 @@ import path from '../Ulities/path'
 const HomeBar = ({selectedProduct, cartItems=[], setCartItems, totalPrice, setTotalPrice, quantity, setQuantity, handleQuantityChange, addToCart, id, increaseQuantity}) => {
 
   return (
-    <div className='w-full flex bg-white px-16 justify-between items-center mt-3 relative'>
+    <div className='w-full flex bg-white px-16 justify-between items-center mt-8 relative'>
         
         <Link to={path.HOME}>
           <img src={logodera} alt="" className='w-[100px] h-[50px] object-cover'/>

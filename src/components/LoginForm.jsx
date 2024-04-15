@@ -52,8 +52,8 @@ const LoginForm = () => {
 
 
   return (
-    <div className='flex flex-col gap-3'>
-      <div className="flex flex-col border-2 p-4 w-[400px]">
+    <div className='flex flex-col gap-3 bg-gray-50 rounded-2xl'>
+      <div className="flex flex-col p-4 w-[400px]">
         <p className='text-[28px] text-[#658C4A] line mb-4 font-semibold'>
             {
               regis ? "Register" : "Login"
@@ -145,7 +145,7 @@ const LoginForm = () => {
           </div>
         </form>
       </div>
-      <div className="flex flex-col border-2 p-4 w-[400px]">
+      <div className="flex flex-col p-4 w-[400px]">
         <div className='flex gap-2 justify-center items-center'>
           <p className='text-[16px] text-center'>
             {

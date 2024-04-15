@@ -15,13 +15,13 @@ function App() {
           <Route path={path.LOGIN} element={<Login />} />
           <Route path={path.FORGOTPASSWORD} element={<ForgotPassword />} />
 
-          <Route path={path.CLOTHING} element={<Fail />} />
-          <Route path={path.BATH} element={<Fail />} />
-          <Route path={path.BEDDING} element={<Fail />} />
-          <Route path={path.HOMEGOODS} element={<Fail />} />
-          <Route path={path.FURNITURE} element={<Fail />} />
-          <Route path={path.FOOTWEAR} element={<Fail />} />
-          <Route path={path.ACCESORIES} element={<Fail />} />
+          <Route path={path.CLOTHING} element={<NEW />} />
+          <Route path={path.BATH} element={<NEW />} />
+          <Route path={path.BEDDING} element={<NEW />} />
+          <Route path={path.HOMEGOODS} element={<NEW />} />
+          <Route path={path.FURNITURE} element={<NEW />} />
+          <Route path={path.FOOTWEAR} element={<NEW />} />
+          <Route path={path.ACCESORIES} element={<NEW />} />
 
           <Route path={path.FAIL} element={<Fail />}/>
           <Route path={path.NEWS} element={ <NEW />} />

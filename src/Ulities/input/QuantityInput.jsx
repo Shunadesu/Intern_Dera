@@ -25,7 +25,7 @@ const QuantityInput = ({ initialValue, onChange }) => {
 
   return (
     <div className="flex items-center gap-4 px-4 py-2 border border-black w-[200px] justify-center rounded-full">
-      <button onClick={handleDecrease} className="text-bold py-2 text-[30px]">
+      <button onClick={handleDecrease} className="text-bold py-2 text-[28px]">
         -
       </button>
       <input
@@ -35,7 +35,7 @@ const QuantityInput = ({ initialValue, onChange }) => {
         value={value}
         onChange={handleChange}
       />
-      <button onClick={handleIncrease} className="text-bold py-2 text-[30px]">
+      <button onClick={handleIncrease} className="text-bold py-2 text-[28px]">
         +
       </button>
     </div>

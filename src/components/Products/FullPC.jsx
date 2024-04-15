@@ -52,8 +52,8 @@ const FullPC = () => {
     <div className=' py-16 flex flex-col gap-4 justify-center'>
         <div className='grid grid-cols-4'>
         {currentProducts.map((product) => (
-          <Link to={`/news/${product.id}`} key={product.id} className='w-[400px] flex flex-col gap-3'>
-            <div className='w-[400px] h-[400px] '>
+          <Link to={`/news/${product.id}`} key={product.id} className='w-[300px] flex flex-col gap-3'>
+            <div className='w-[300px] h-[300px] '>
                 <img src={product.img} alt={product.name} className='w-full h-full object-cover rounded-md' />
             </div>
             <h3 className='text-[20px] font-semibold'>{product.name}</h3>
@@ -68,7 +68,7 @@ const FullPC = () => {
           <button
             key={index}
             onClick={() => handlePageChange(index + 1)}
-            className={`mx-2 px-8 py-6 rounded-full text-[18px] ${
+            className={`mx-2 px-6 py-4 rounded-full text-[18px] ${
               currentPage === index + 1 ? 'bg-[#658C4A] text-white' : 'bg-[#658C4A] text-white opacity-70 hover:opacity-100'
             }`}
           >

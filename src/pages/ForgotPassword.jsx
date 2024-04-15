@@ -2,15 +2,16 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import icons from '../Ulities/icons';
 import Swal from 'sweetalert2'
-
+import banner from '../image/banner.png'
 
 const ForgotPassword = () => {
     const navigate = useNavigate();
     const {MdArrowBack} = icons
     const Swal = require('sweetalert2')
   return (
-    <div className='flex justify-center items-center px-4 h-[100vh] w-full max-w-[1880px] '>
-        <div className='flex flex-col gap-4 justify-center w-[450px] h-[400px] bg-white rounded-lg p-6 border border-gray-400 relative'>
+    <div className='flex justify-center items-center px-4 h-[100vh] w-full'>
+        <img src={banner} alt="" className='absolute top-0 bottom-0 w-full h-full'/>
+        <div className='z-10 flex flex-col gap-4 justify-center w-[450px] h-[400px] bg-white rounded-lg p-6 border border-gray-400 relative'>
             <label htmlFor="forgot"
             className='text-[24px] text-[#658C4A]'
             >Forgot password</label>

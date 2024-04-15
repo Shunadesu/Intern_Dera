@@ -41,8 +41,8 @@ const ProductNew = ({ sliderRef }) => {
       <Slider ref={sliderRef} {...settings}>
         {
            productNew.map((product) => (
-            <Link to={`/news/${product.id}`} key={product.id} className='w-[400px] flex flex-col gap-3'>
-              <div className='w-[400px] h-[400px] '>
+            <Link to={`/news/${product.id}`} key={product.id} className='w-[300px] flex flex-col gap-3'>
+              <div className='w-[300px] h-[300px] '>
                   <img src={product.img} alt={product.name} className='w-full h-full object-cover rounded-md' />
               </div>
               <h3 className='text-[20px] font-semibold'>{product.name}</h3>

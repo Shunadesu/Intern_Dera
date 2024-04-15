@@ -25,7 +25,7 @@ const Voting = () => {
                 </div>
                 <p className='px-2'>( 20 reviews )</p>
             </div>
-            <div className='flex gap-16 justify-center items-center flex-row-reverse'>
+            <div className='flex gap-8 justify-center items-center flex-row-reverse'>
                 
                     {[...Array(5)].map((sunny, i) => {
                         return (
