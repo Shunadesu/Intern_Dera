@@ -1,8 +1,7 @@
-import {GoHomeFill} from 'react-icons/go'
+import { GoHomeFill } from 'react-icons/go'
 import { FaMoon,FaTicketAlt, FaSun, FaGoogle, FaWhatsapp, FaTiktok,FaMoneyBillWave,FaRegCheckCircle,FaRegCircle, FaInstagram, FaFacebook, FaStar, FaRegHandPointRight  } from "react-icons/fa";
 import { MdArrowBack,MdSunny, MdClose, MdOutlineExitToApp, MdNavigateNext, MdNavigateBefore } from "react-icons/md";
-import { IoMdCloseCircleOutline, IoMdArrowForward } from "react-icons/io";
-import { IoMdArrowRoundForward, IoIosArrowRoundForward } from "react-icons/io";
+import { IoMdCloseCircleOutline, IoMdArrowForward, IoMdArrowRoundForward, IoIosArrowRoundForward } from "react-icons/io";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { CiUser, CiShoppingCart } from "react-icons/ci";
 import { FiTrash, FiPlus, FiMinus } from "react-icons/fi";
@@ -12,38 +11,44 @@ import { BiLike } from "react-icons/bi";
 
 const icons = {
     GoHomeFill,
+
     FaRegCheckCircle,
     FaRegCircle,
     FaMoon,
     FaSun,
     FaGoogle,
-    MdArrowBack,
-    IoMdCloseCircleOutline,
-    MdClose,
-    IoMdArrowRoundForward,
-    IoIosArrowRoundForward,
-    HiMagnifyingGlass,
-    CiUser,
-    CiShoppingCart,
-    IoMdArrowForward,
     FaWhatsapp,
     FaTiktok,
     FaInstagram,
     FaFacebook,
+    FaStar,
+    FaRegHandPointRight,
+    FaMoneyBillWave,
+    FaTicketAlt,
+
+    MdArrowBack,
+    MdClose,
+    MdSunny,
     MdOutlineExitToApp,
     MdNavigateNext,
     MdNavigateBefore,
-    FaStar,
-    FaRegHandPointRight,
-    BiLike,
+
+    IoMdCloseCircleOutline,
+    IoMdArrowRoundForward,
+    IoIosArrowRoundForward,
+    IoMdArrowForward,
+    IoChatbubblesOutline,
+    
+    HiMagnifyingGlass,
+    CiUser,
+    CiShoppingCart,
+    
     FiTrash,
     FiPlus,
     FiMinus,
-    MdSunny,
-    FaMoneyBillWave,
+    
     BsBank2,
-    FaTicketAlt,
-    IoChatbubblesOutline,
+    BiLike,
 }
 
 export default icons
