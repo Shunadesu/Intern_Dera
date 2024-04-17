@@ -11,23 +11,43 @@ import HomeGoods from '../../image/image5_homegidohi.png'
 const NavBanner = ({controls}) => {
   return (
     <div 
-    className='w-full flex bg-white px-16 items-center my-32 gap-4 justify-center text-white font-semibold'>
+    className='w-full flex bg-white px-16 items-center my-32 gap-4 justify-center text-white font-semibold md-max-2:flex-col'>
         <Link to={path.CLOTHING}>
-            <div className='w-[424px] h-[424px] relative hover:opacity-90'>
+            <div className='w-[424x] h-[500px] relative hover:opacity-90
+            md-max:w-[400px] md-max:h-[424px] 
+            md-max-2:w-[1000px] md-max-2:h-[200px]
+            md-max-3:w-[730px] md-max-3:h-[200px]
+            md-max-4:w-[450px]
+            '>
                 <img src={clothing} alt="" className='w-full h-full object-cover rounded-lg'/>
                 <div className='absolute bg-[#333333] bottom-4 left-4 px-4 py-2 rounded-full'> Clothing </div>
             </div>
         </Link>
         <div className='flex flex-col gap-4'>
-            <div className='flex gap-2 w-[600px] justify-between'>
+            <div className='flex gap-4 w-[700px] justify-between
+            md-max:w-[550px] 
+            md-max-2:w-[1000px]
+            md-max-3:w-[730px] md-max-3:h-full md-max-3:flex-col
+            md-max-4:w-[450px]
+            '>
                 <Link to={path.BEDDING}>
-                    <div className='w-[330px] h-[208px] relative hover:opacity-90'>
+                    <div className=' w-[430px] h-[240px] relative hover:opacity-90
+                    md-max:w-[312px] md-max:h-[208px]
+                    md-max-2:w-[690px]
+                    md-max-3:w-[730px]
+                    md-max-4:w-[450px]
+                    '>
                         <img src={bedding} alt="" className='w-full h-full object-cover rounded-lg'/>
                         <div className='absolute bg-[#333333] bottom-4 left-4 px-4 py-2 rounded-full'> Bedding </div>
                     </div> 
                 </Link> 
                 <Link to={path.ACCESORIES}>
-                    <div className='w-[250px] h-[208px] relative hover:opacity-90'>
+                    <div className=' w-[250px] h-[240px] relative hover:opacity-90
+                    md-max:w-[220px] md-max:h-[208px] 
+                    md-max-2:w-[300px]
+                    md-max-3:w-[730px]
+                    md-max-4:w-[450px]
+                    '>
                         <img src={accesories} alt="" className='w-full h-full object-cover rounded-lg'/> 
                         <div className='absolute bg-[#333333] bottom-4 left-4 px-4 py-2 rounded-full'> Accesories </div>
                     </div> 
@@ -35,15 +55,24 @@ const NavBanner = ({controls}) => {
                 </Link>
             </div>
             <Link to={path.FURNITURE}>
-
-                    <div className='w-[600px] h-[200px] relative hover:opacity-90'>
+                    <div className='w-[700px] h-[240px] relative hover:opacity-90
+                    md-max:w-[550px] md-max:h-[200px] 
+                    md-max-2:w-[1000px]
+                    md-max-3:w-[730px]
+                    md-max-4:w-[450px]
+                    '>
                         <img src={furniture} alt="" className='w-full h-full object-cover rounded-lg' />
                         <div className='absolute bg-[#333333] bottom-4 left-4 px-4 py-2 rounded-full'> Furniture </div>
                     </div> 
-        </Link>
+            </Link>
         </div>
         <Link to={path.HOMEGOODS}>
-            <div className='w-[312px] h-[424px] relative hover:opacity-90'>
+            <div className='w-[400px] h-[500px] relative hover:opacity-90
+            md-max:w-[312px] md-max:h-[424px] 
+            md-max-2:w-[1000px]
+            md-max-3:w-[730px] md-max-3:h-[200px]
+            md-max-4:w-[450px]
+            '>
                    <img src={HomeGoods} alt="" className='w-full h-full object-cover rounded-lg' />
                         <div className='absolute bg-[#333333] bottom-4 left-4 px-4 py-2 rounded-full'> Home Goods </div>
                     </div> 

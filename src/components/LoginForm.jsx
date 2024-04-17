@@ -78,7 +78,7 @@ const LoginForm = () => {
           {
             regis ? (
             <div className='flex justify-center flex-col gap-2'>
-            <label htmlFor="email" className='font-bold text-[#666666]'>Phone</label>
+            <label htmlFor="phone" className='font-bold text-[#666666]'>Phone</label>
               <input
                 id="phone"
                 className='px-4 py-2 rounded-lg border border-gray-300'

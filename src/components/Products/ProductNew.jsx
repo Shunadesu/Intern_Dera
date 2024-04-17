@@ -13,6 +13,37 @@ var settings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1200, // Medium screens
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 1000, // Small screens
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 900, // Small screens
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 700, // Small screens
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    }
+    // You can add more breakpoints as needed
+  ]
 };
 
 const formatPrice = (price) => {
@@ -41,11 +72,19 @@ const ProductNew = ({ sliderRef }) => {
       <Slider ref={sliderRef} {...settings}>
         {
            productNew.map((product) => (
-            <Link to={`/news/${product.id}`} key={product.id} className='w-[300px] flex flex-col gap-3'>
-              <div className='w-[300px] h-[300px] '>
+            <Link to={`/news/${product.id}`} key={product.id} className='
+            w-[300px] flex flex-col gap-4
+            md-max-3:w-[180px]
+            '>
+              <div className='w-[300px] h-[300px] 
+              md-max-3:w-[180px] md-max-3:h-[180px]
+              '>
                   <img src={product.img} alt={product.name} className='w-full h-full object-cover rounded-md' />
               </div>
-              <h3 className='text-[20px] font-semibold'>{product.name}</h3>
+              <h3 className='text-[20px]
+              md-max-2:text-[18px]
+              md-max-3:text-[16px]
+              font-semibold'>{product.name}</h3>
               <div className='text-[16px] font-medium'>
                   <p className='text-[#658C4A]'>{formatPrice(product.price)}</p>
               </div>

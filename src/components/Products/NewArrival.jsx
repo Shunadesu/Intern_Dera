@@ -32,16 +32,24 @@ const NewArrival = () => {
     <div className='w-full px-16 py-16 flex flex-col gap-8 justify-center'>
         <div className='flex justify-between px-8 items-center'>
           <div className='flex flex-col gap-2'>
-            <h1 className='font-heading_1 font-semibold text-[52px] text-[#333333]'>
+            <h1 className='font-heading_1 font-semibold text-[52px] text-[#333333]
+            md-max-2:text-[42px]
+            md-max-3:text-[30px]
+            '>
                 New Arrival
             </h1>
-            <p className='text-[20px] text-[#666666]'>Be the first to have the first-class product</p>
+            <p className='text-[20px]
+            md-max-2:text-[18px]
+            md-max-3:text-[16px]
+            text-[#666666]'>Be the first to have the first-class product</p>
           </div>
-          <div className='flex gap-4 text-[#666666]'>
-              <button onClick={previousSlide} className='bg-gray-200 p-4 rounded-full transition-all duration-500 hover:bg-[#E7CEC0] hover:text-black'>
+          <div className='flex gap-4 text-[#666666]
+          md-max-3:gap-2
+          '>
+              <button onClick={previousSlide} className='bg-gray-200 p-4 md-max-3:p-2 rounded-full transition-all duration-500 hover:bg-[#E7CEC0] hover:text-black'>
                 <MdArrowBack size={24} />
               </button>
-              <button onClick={nextSlide} className='bg-gray-200 p-4 rounded-full transition-all duration-500 hover:bg-[#E7CEC0] hover:text-black'>
+              <button onClick={nextSlide} className='bg-gray-200 p-4 md-max-3:p-2 rounded-full transition-all duration-500 hover:bg-[#E7CEC0] hover:text-black'>
                 <IoMdArrowForward size={24} />
               </button>
           </div>

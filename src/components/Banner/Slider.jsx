@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import slider from '../../image/slider.jpeg'
 import slider2 from '../../image/image1.png';
 import { Link, useLocation } from 'react-router-dom';
@@ -6,23 +6,47 @@ import path from '../../Ulities/path'
 const Slider = () => {
 
   const location = useLocation();
-
+  const [border, setBorder] = useState('none')
   // Define a function to determine which image to render based on the pathname
   const getImageForPathname = () => {
     const { pathname } = location;
-    if (pathname === path.NEWS) {
+    if (pathname === path.NEWS || pathname === path.BATH) {
       return slider2; // Change to the appropriate image for the "/news" route
     }
     // Default image for other routes
     return slider; // Change to the default image you want to display
   };
 
+  const { pathname } = location;
   return (
-    <div className='w-full h-[500px] flex gap-2 m-auto border-t-2 border-[#658C4A]'>
+    <div className={`w-full h-[500px] flex gap-2 m-auto 
+    md-max-3:flex-col md-max-3:gap-4 md-max-3:z-10
+    
+    ${pathname === path.NEWS 
+      || pathname === path.CLOTHING 
+      || pathname === path.BATH 
+      || pathname === path.ACCESORIES
+      || pathname === path.HOMEGOODS
+      || pathname === path.FURNITURE
+      || pathname === path.BEDDING
+      ? 'border-t-0' : 'border-t-2 border-[#658C4A]'}
+    `}>
+      
         <div className='flex-1 flex justify-center items-center '>
-            <div className='flex flex-col gap-6 justify-center px-16'>
-                <h1 className='text-[62px] font-bold font-heading_1'>Healthy cutlery, healthy body</h1>
-                <h4 className='text-[20px] pr-32'>Upgrade your dining experience and begin your path to a healthy you right now</h4>
+            <div className='flex flex-col gap-6 justify-center px-16 
+            md-max:gap-4
+            md-max-3:border-2 md-max-3:border-[#658C4A] md-max-3:py-6 md-max-3:mx-16 md-max-3:bg-white
+            md-max-3:rounded-3xl
+            '>
+                <h1 className='text-[62px] pr-8 font-bold font-heading_1
+                md-max:text-[50px]
+                md-max-2:text-[38px]
+                md-max-3:text-[32px] md-max-3:pr-0
+                '>Healthy cutlery, <br/> healthy body</h1>
+                <h4 className='text-[20px] pr-32 text-[#666666] font-normal
+                md-max-2:pr-16
+                md-max-3:text-[16px]
+                '>Upgrade your dining experience and begin your path to a healthy you right now</h4>
                 <Link
                 to={path.NEWS}
                 className='bg-[#658C4A] 
@@ -31,8 +55,11 @@ const Slider = () => {
             </div>
         </div>
 
-        <div className='flex-1'>
-        <img src={getImageForPathname()} alt="slider" className='w-full h-full object-cover'/>        </div>
+        <div className='flex-1
+        md-max-3:absolute md-max-3:-z-10 md-max-3:h-[500px] w-full
+        '>
+        <img src={getImageForPathname()} alt="slider" className='w-full h-full object-cover object-left-top'/>        
+        </div>
     </div>
   )
 }

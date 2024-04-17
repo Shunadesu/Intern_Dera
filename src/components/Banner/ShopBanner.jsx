@@ -9,7 +9,11 @@ const ShopBanner = () => {
         />
          <div className="absolute inset-0 bg-[#658C4A] opacity-80"></div>
          <div className="absolute inset-0 flex flex-col gap-16 items-center justify-center font-heading_1 px-24">
-            <h1 className="text-white text-[35px] font-bold text-center">
+            <h1 className="text-white text-[35px]
+            md-max-2:text-[28px]
+            md-max-3:text-[22px]
+            md-max-4:text-[18px]
+            font-bold text-center">
             Shop guilt-free knowing that our eco-friendly e-commerce platform is committed to reducing environmental impact and promoting sustainable practices in every step of the shopping process
             </h1>
             <img src={Vector} alt="" />

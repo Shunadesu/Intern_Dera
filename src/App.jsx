@@ -8,8 +8,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App font-custom">
-      
+    <div className="App font-custom">   
         <Routes>
           <Route path={path.HOME} element={<Home />} />
           <Route path={path.LOGIN} element={<Login />} />

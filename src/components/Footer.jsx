@@ -9,9 +9,9 @@ import sunnytest from '../image/footerbackground.jpeg'
 const Footer = () => {
 
   return (
-    <div className='h-[700px] mt-16 relative'>
-        <img src={sunnytest} alt="" className='absolute w-full h-full -z-10 object-cover mt-12 opacity-30' />
-        <div className='flex flex-col px-24 gap-8 items-center justify-center'>
+    <div className='h-full relative'>
+        <img src={sunnytest} alt="" className='absolute w-full h-full -z-10 object-cover opacity-30' />
+        <div className='flex flex-col px-24 py-8 gap-8 items-center justify-center'>
             <div className='w-[120px] h-[120px]'>
                 <img src={logoFooter} alt="logo" className='object-cover w-full h-full'/>
             </div>

@@ -8,6 +8,7 @@ import { FiTrash, FiPlus, FiMinus } from "react-icons/fi";
 import { BsBank2 } from "react-icons/bs";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { BiLike } from "react-icons/bi";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const icons = {
     GoHomeFill,
@@ -49,6 +50,8 @@ const icons = {
     
     BsBank2,
     BiLike,
+
+    GiHamburgerMenu,
 }
 
 export default icons
