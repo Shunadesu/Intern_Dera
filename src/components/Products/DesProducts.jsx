@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -59,22 +59,43 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
         return formattedPrice;
     };
 
+    const [isShow, setIsShow] = useState(true)
+
     return (
-        <div className='flex justify-between items-start gap-8 px-32 py-16'>
-            <div className='flex flex-col flex-1 gap-4 p-4 w-[600px] justify-center items-center'>
+        <div className='flex justify-between items-start gap-8 px-32 py-16
+        md-max:px-16
+        md-max-2:flex-col
+        md-max-3:gap-6
+        md-max-4:gap-4
+        '>
+            <div className='flex flex-col md-max-2:justify-center md-max-2:items-center md-max-2:m-auto flex-1 gap-4 p-4 
+            w-[600px]
+            md-max:w-[480px]
+            md-max-2:w-[600px]    
+            md-max-3:w-[420px] md-max-3:gap-0  
+            justify-center items-center'>
                 <div className='w-full flex justify-center items-center'>
-                    <div className='w-[500px] h-[500px]'>
+                    <div className='w-[500px] h-[500px]
+                    md-max:w-[400px] md-max:h-[400px]
+                    md-max-2:w-[600px] md-max-2:h-[600px]
+                    md-max-3:w-[420px] md-max-3:h-[420px]
+                    '>
                         <img src={img} alt="" className='w-full h-full object-cover' />
                     </div>
                 </div>
-                <div className='flex justify-center items-center gap-12'>
+                <div className='flex justify-center items-center gap-12 md-max-2:gap-8'>
                     <div onClick={()=>previousSlide()} className='
                     transition-all duration-500
                     hover:text-white hover:bg-[#658C4A] hover:border-white 
-                    px-2 py-[4rem] w-full h-full bg-white rounded-xl border border-gray-300 cursor-pointer'>
+                    px-2 py-[4rem] md-max-2:py-[3rem] md-max-3:py-[2rem] md-max-4:py-[1.5rem] w-full h-full bg-white rounded-xl border border-gray-300 cursor-pointer'>
                         <MdNavigateBefore size={24}/>
                     </div>
-                    <div className='w-[400px]'>
+                    <div className='w-[400px]
+                    md-max:w-[320px]
+                    md-max-2:w-[400px]
+                    md-max-3:w-[300px]
+                    md-max-4:w-[260px]
+                    '>
                         <Slider ref={sliderRef} {...settings}>
                             <div className='h-[200px] px-2' >
                                 <img src={img} alt="" className='w-full h-full object-contain' />
@@ -100,20 +121,26 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
                     <div onClick={()=>nextSlide()} className='
                     transition-all duration-500
                     hover:text-white hover:bg-[#658C4A] hover:border-white 
-                    px-2 py-[4rem] w-full h-full bg-white rounded-xl border border-gray-300 cursor-pointer' >
+                    px-2 py-[4rem] md-max-2:py-[3rem] md-max-3:py-[2rem] md-max-4:py-[1.5rem] w-full h-full bg-white rounded-xl border border-gray-300 cursor-pointer' >
                         <MdNavigateNext size={24}/>
                     </div>
                 </div>
-                </div>
-            <div className='flex flex-col gap-4 flex-1'>
-                <div className='uppercase font-bold text-[28px] text-[#333333] '>
+            </div>
+            <div className='flex flex-col gap-4 flex-1 md-max-2:gap-8'>
+                <div className='uppercase font-bold text-[28px]
+                md-max:text-[24px]
+                md-max-2:text-[32px]
+                md-max-3:text-[24px]
+                text-[#333333] '>
                     {name}
                 </div>
-                <div className='text-[#333333]'>
+                <div className='text-[#333333] font-semibold'>
                     Status: In stock
                 </div>
-                <p className=''>
-                where sustainability meets comfort in a sleek and modern design. Crafted with a commitment to environmental responsibility, this lounge chair is made from recycled plastic materials, contributing to reducing waste while providing exceptional durability.
+                <p 
+                onClick={()=> setIsShow(!isShow)}
+                className={`${isShow ? 'md-max:line-clamp-3 cursor-pointer' : ''}`}>
+                Where sustainability meets comfort in a sleek and modern design. Crafted with a commitment to environmental responsibility, this lounge chair is made from recycled plastic materials, contributing to reducing waste while providing exceptional durability.
                 </p>
                 <div className='flex gap-2 items-center'>
                     {[...Array(5)].map((star, i) => {
@@ -129,7 +156,9 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
                 </div>
                 <div className='flex gap-6 items-center'>
                     <div className='flex flex-col gap-2 justify-center'>
-                        <div className='text-[28px] font-bold text-[#658C4A]'>
+                        <div className='text-[32px]
+                        md-max:text-[28px]
+                        font-bold text-[#658C4A]'>
                             {formatPrice(price)}
                         </div>
                         <div  className='text-[16px] text-[#191919]'>
@@ -142,8 +171,8 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
                         </del>                    
                     </div>
                 </div>
-                <div className='flex flex-col gap-4'>
-                    <h1 className='uppercase text-[#333333] font-bold text-[16px]'>
+                <div className='flex flex-col gap-4 md-max-2:flex-row'>
+                    <h1 className='uppercase text-[#333333] font-bold text-[18px] md-max:text-[16px] md-max-2:text-[18px] md-max-3:text-[16px]'>
                         incentives 
                     </h1>
                     <div className='px-6 flex gap-4 items-center'>
@@ -151,15 +180,14 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
                         <p className='text-[#333333]'>50% off first bill</p>
                     </div>
                 </div>
-                <div className='flex flex-col gap-4'>
-                    <h1 className='uppercase text-[#333333] font-bold text-[16px]'>
+                <div className='flex flex-col gap-4 md-max-2:flex-row md-max-2:items-center md-max-2:gap-8'>
+                    <h1 className='uppercase text-[#333333] font-bold text-[18px] md-max:text-[16px] md-max-2:text-[18px] md-max-3:text-[16px]'>
                         quantity
                     </h1>
                     <QuantityInput initialValue={quantity} onChange={handleQuantityChange} />
                 </div>
                 <div className='flex gap-4 my-4 items-center'>
-                    <button 
-                    
+                    <button  
                     className='py-4 px-8 bg-[#658C4A] rounded-2xl font-semibold text-white uppercase'
                     onClick={() => 
                         sunnycheck ?

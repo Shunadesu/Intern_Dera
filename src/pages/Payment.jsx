@@ -51,7 +51,7 @@ const Payment = () => {
         <p className='text-[16px]'>Free Shipping with minimum purchase Rp250.000</p>
         <IoIosArrowRoundForward size={30} className='font-bold'/>
       </div>
-      <div className='w-[1440px] flex flex-col m-auto'>
+      <div className='w-full max-w-[2000px] flex flex-col m-auto relative'>
           <HomeBar 
           selectedProduct={selectedProduct}
           cartItems={cartItems}

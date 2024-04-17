@@ -13,7 +13,7 @@ module.exports = {
         'md-max': {'max': '1441px'},
         'md-max-2': {'max': '1200px'},
         'md-max-3': {'max': '900px'},
-        'md-max-4': {'max': '660px'},
+        'md-max-4': {'max': '680px'},
       },
     },
   },

@@ -4,7 +4,10 @@ const FixProduct = ({selectedProduct}) => {
 
   const { name } = selectedProduct  
   return (
-    <div className='px-24 flex flex-col gap-4 w-full'>
+    <div className='px-24 flex flex-col gap-4 w-full
+    md-max:px-20
+    md-max-2:px-16    
+    '>
         <h1 className='text-[#333333] text-[24px] font-bold'>Description</h1>
         <p className='text-[16px] leading-7'>
             Introducing the <strong>{name}</strong>, a testament to sustainability and comfort intertwining seamlessly in a contemporary design. Crafted with a steadfast commitment to environmental consciousness, this lounge chair stands as a beacon of eco-friendliness, constructed entirely from recycled plastic materials. This not only reduces waste but also champions durability, ensuring a long lifespan for the product.

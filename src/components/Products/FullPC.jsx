@@ -54,12 +54,13 @@ const FullPC = () => {
         md-max-2:grid-cols-2
         md-max-3:grid-cols-3
         md-max-4:grid-cols-2
+
         '>
         {currentProducts.map((product) => (
           <Link to={`/news/${product.id}`} key={product.id} className='w-[300px]
           md-max-3:w-[220px]
           md-max-4:w-[180px]
-          flex flex-col gap-3'>
+          flex flex-col gap-3         justify-center'>
             <div className='w-[300px] h-[300px] 
             md-max-3:w-[220px] md-max-3:h-[220px]
             md-max-4:w-[180px] md-max-4:h-[180px]
