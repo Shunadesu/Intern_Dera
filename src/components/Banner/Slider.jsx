@@ -33,10 +33,11 @@ const Slider = () => {
     `}>
       
         <div className='flex-1 flex justify-center items-center '>
-            <div className='flex flex-col gap-6 justify-center px-16 
+            <div className='flex flex-col gap-6 justify-center 
+            px-32
             md-max:gap-4
+            md-max-2:px-16 
             md-max-3:py-6
-
             md-max-3:items-center
             md-max-4:px-8
             '>
