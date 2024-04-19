@@ -48,7 +48,7 @@ const ResetPassword = () => {
     const Swal = require('sweetalert2')
   return (
     <div className='flex justify-center items-center px-4 h-[100vh] w-full'>
-        <img src={banner} alt="" className='absolute top-0 bottom-0 w-full h-full'/>
+        <img src={banner} alt="" className='absolute top-0 bottom-0 w-full h-full object-cover'/>
     <div className='z-10 flex flex-col gap-4 justify-center w-[450px] h-[500px] bg-white rounded-lg p-6 border border-gray-400 relative'>
     <div 
     onClick={()=>navigate('/login')}

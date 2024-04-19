@@ -56,7 +56,7 @@ const removeFromCart = (index) => {
 
   return (
     <div >
-        <div>
+       
             {/* Other component content */}
             <button 
             className='w-full md-max-3:text-[30px] md-max-4:text-[24px] text-[40px]'
@@ -64,7 +64,7 @@ const removeFromCart = (index) => {
                 <CiShoppingCart/>
             </button>
             {isCartVisible &&  <CartBar selectedProduct={selectedProduct} isCartVisible={isCartVisible} setIsCartVisible={setIsCartVisible} toggleCartVisibility={toggleCartVisibility} cartItems={cartItems} setCartItems={setCartItems} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} removeFromCart={removeFromCart} />}
-        </div>
+        
     </div>
   )
 }
