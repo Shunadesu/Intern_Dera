@@ -19,8 +19,8 @@ const [lineclimb, setlineClimb] = useState(true)
                                 return (
                                 <FaStar
                                     key={i}
-                                    color={"#658C4A"}
-                                    size={16}
+                                    color={"#E7CEC0"}
+                                    size={18}
                                 />
                                 );
                             })}

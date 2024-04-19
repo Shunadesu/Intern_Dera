@@ -17,19 +17,19 @@ const Voting = () => {
         <h1 className='text-[#333333] text-[28px] md-max-2:text-[24px] font-bold'>Voting</h1>
         <div className='px-8 flex items-center w-full justify-between '>
             <div className='flex flex-col gap-2 items-center '>
-                <p className='text-[28px] font-bold text-[#685c]'>4.9/5</p>
+                <p className='text-[32px] font-bold text-[#685c]'>4.9/5</p>
                 <div className='flex gap-2 items-center'>
                     {[...Array(5)].map((star, i) => {
                         return (
                         <FaStar
                             key={i}
-                            color={"#658C4A"}
-                            size={28}
+                            color={"#E7CEC0"}
+                            size={24}
                         />
                         );
                     })}
                 </div>
-                <p className='px-2'>( 20 reviews )</p>
+                <p className='px-2 text-[16px] text-[#E7CEC0]'>( 20 reviews )</p>
             </div>
             <div className=' flex flex-col gap-4'>
                     <div className=''>
@@ -56,7 +56,7 @@ const Voting = () => {
                                 })}
                             <div className='px-4 py-2 border border-[#658C4A] rounded-xl
                             hover:bg-[#658C4A] hover:text-white cursor-pointer
-                            transition-all duration-500 md-max-2:hidden
+                            transition-all duration-500
                             '> All </div>
                             </div>
                             :
@@ -75,7 +75,10 @@ const Voting = () => {
                                                                 color={"#E7CEC0"}
                                                                 size={16}
                                                             />
-                                            
+                                        <div className='px-4 py-2 border border-[#658C4A] rounded-xl
+                                        hover:bg-[#658C4A] hover:text-white cursor-pointer
+                                        transition-all duration-500 md-max-2:hidden
+                                        '> All </div>    
                                         </div>
                                     );
                                 })}

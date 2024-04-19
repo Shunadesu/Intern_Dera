@@ -49,11 +49,14 @@ const FullPC = () => {
         const totalPages = Math.ceil(productNew.length / itemsPerPage);
 
   return (
-    <div className=' py-16 flex flex-col gap-4 justify-center'>
+    <div className=' py-16
+    md-max-2:py-8
+    md-max-4:py-4
+    flex flex-col gap-4 justify-center'>
         <div className='grid grid-cols-4
-        md-max-2:grid-cols-2
+        md-max-2:grid-cols-2 py-8
         md-max-3:grid-cols-3
-        md-max-4:grid-cols-2 md-max-4:py-8
+        md-max-4:grid-cols-2 md-max-4:py-4
 
         '>
         {currentProducts.map((product) => (

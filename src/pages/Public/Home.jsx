@@ -84,7 +84,7 @@ const Home = () => {
              '>
             <img src={popup} alt="" className='w-full h-full object-cover rounded-tl-2xl rounded-bl-2xl'/>
             </div>
-            <div className='flex flex-col gap-4 justify-center items-center text-center px-8'>
+            <div className='flex flex-col gap-4 justify-center items-center text-center px-8 md-max-4:px-4'>
               <h1 className='font-heading_1 text-[20px]
               md-max-4:text-[18px]
               font-bold'> Get 15% off </h1>
@@ -99,7 +99,7 @@ const Home = () => {
               </Link>
             </div>
             <div
-            className='absolute top-5 right-5 cursor-pointer rounded-full p-2 bg-white
+            className='absolute top-5 md-max-4:top-3 right-5 md-max-4:right-3 cursor-pointer rounded-full p-2 bg-white
             hover:bg-[#658C4A] hover:text-white
             transition-all duration-500
             '
@@ -114,21 +114,21 @@ const Home = () => {
       <div className='fixed bottom-10 right-10 z-[1000]'>
         <div className='flex flex-col gap-4'>
           <div 
-          className='p-4 bg-[#658C4A] rounded-tl-2xl border rounded-tr-2xl rounded-br-2xl text-white
+          className='p-4 md-max-4:p-2 bg-[#658C4A] rounded-tl-2xl border rounded-tr-2xl rounded-br-2xl text-white
           hover:bg-white hover:text-[#658C4A] hover:border-[#658C4A]
           transition-all duration-500
           '
           onClick={() =>  setShowPopup(!showPopup)}>
-            <FaTicketAlt size={28}/>
+            <FaTicketAlt size={20}/>
           </div>
 
           <div 
-          className='p-4 bg-[#658C4A] rounded-tl-2xl border rounded-tr-2xl rounded-bl-2xl text-white
+          className='p-4 md-max-4:p-2 bg-[#658C4A] rounded-tl-2xl border rounded-tr-2xl rounded-bl-2xl text-white
           hover:bg-white hover:text-[#658C4A] hover:border-[#658C4A]
           transition-all duration-500
           '
           onClick={() =>  setShowPopup(!showPopup)}>
-            <IoChatbubblesOutline size={28}/>
+            <IoChatbubblesOutline size={20}/>
           </div>
         </div>
       </div>

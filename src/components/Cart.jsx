@@ -59,7 +59,7 @@ const removeFromCart = (index) => {
        
             {/* Other component content */}
             <button 
-            className='w-full md-max-3:text-[30px] md-max-4:text-[24px] text-[40px]'
+            className='w-full md-max-3:text-[30px] md-max-4:text-[24px] text-[40px] flex justify-center items-center'
             onClick={toggleCartVisibility}>
                 <CiShoppingCart/>
             </button>

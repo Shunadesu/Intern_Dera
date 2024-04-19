@@ -35,18 +35,21 @@ const Slider = () => {
         <div className='flex-1 flex justify-center items-center '>
             <div className='flex flex-col gap-6 justify-center px-16 
             md-max:gap-4
-            md-max-3:border-2 md-max-3:border-[#658C4A] md-max-3:py-6 md-max-3:mx-16 md-max-3:bg-white
-            md-max-3:rounded-3xl
+            md-max-3:py-6
+
+            md-max-3:items-center
             md-max-4:px-8
             '>
                 <h1 className='text-[62px] pr-8 font-bold font-heading_1
                 md-max:text-[50px]
                 md-max-2:text-[38px]
-                md-max-3:text-[32px] md-max-3:pr-0
+                md-max-3:text-[62px] md-max-3:pr-0 md-max-3:text-center md-max-3:py-4
+                md-max-4:text-[48px]
                 '>Healthy cutlery, <br/> healthy body</h1>
                 <h4 className='text-[20px] pr-32 text-[#666666] font-normal
                 md-max-2:pr-16
-                md-max-3:text-[16px]
+                md-max-3:text-[20px] md-max-3:text-center md-max-3:pr-0
+                md-max-4:text-[18px]
                 '>Upgrade your dining experience and begin your path to a healthy you right now</h4>
                 <Link
                 to={path.NEWS}
@@ -57,7 +60,8 @@ const Slider = () => {
         </div>
 
         <div className='flex-1
-        md-max-3:absolute md-max-3:-z-10 md-max-3:h-[500px] w-full
+        md-max-3:absolute md-max-3:-z-10 md-max-3:h-[550px] w-full
+        md-max-3:opacity-35
         '>
         <img src={getImageForPathname()} alt="slider" className='w-full h-full object-cover object-left-top'/>        
         </div>
