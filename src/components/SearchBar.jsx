@@ -10,7 +10,7 @@ const [isShow, setIsShow] = useState(true);
     className={`flex gap-4 items-center w-[880px] h-[50px] rounded-full border border-gray-300 px-4
     md-max:w-[500px]
     md-max-3:w-[300px]
-    md-max-4:${isShow ? 'w-[50px]' : 'w-[200px]'}
+    ${isShow ? 'md-max-4:w-[50px]' : 'md-max-4:w-[200px]'}
     transition-all duration-500
     md-max-4:hover:text-[#658c4a] md-max-4:cursor-pointer
     `}>

@@ -92,7 +92,7 @@ const NEW = () => {
               <h1 className='font-heading_1 text-[20px]
               md-max-4:text-[18px]
               font-bold'> Get 15% off </h1>
-              <p className='text-[#666666] md-max-4:text-[16px]'>On your initial purchase of our chosen products</p>
+              <p className='text-[#666666] md-max-4:text-[16px] md-max-5:text-[14px]'>On your initial purchase of our chosen products</p>
               <Link to={path.NEWS}>
                   <div className='text-[#658C4A] text-[18px]
                   md-max-4:text-[16px]
