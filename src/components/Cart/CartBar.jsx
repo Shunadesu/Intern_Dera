@@ -17,6 +17,25 @@ const CartBar = ({ cartItems =[], setCartItems, increaseQuantity, decreaseQuanti
     }
     }, [setCartItems]); 
 
+    
+  const formatPrice = (price) => {
+    // Convert price to string
+    const priceString = price.toString();
+    
+    // Split the price into integer and decimal parts
+    const [integerPart, decimalPart] = priceString.split('.');
+    
+    // Pad the decimal part with zeroes to ensure three decimal places
+    const paddedDecimalPart = decimalPart ? decimalPart.padEnd(3, '0') : '000';
+    
+    // Format integer part with 'Rp' prefix and thousand separators
+    const formattedIntegerPart = 'Rp' + parseInt(integerPart).toLocaleString();
+    
+    // Combine formatted integer part with padded decimal part
+    const formattedPrice = formattedIntegerPart + '.' + paddedDecimalPart;
+    
+    return formattedPrice;
+    };
     const {FiTrash, FiPlus, FiMinus, MdClose, MdSunny} = icons
   return (
     <div>
@@ -44,7 +63,7 @@ const CartBar = ({ cartItems =[], setCartItems, increaseQuantity, decreaseQuanti
             <p className='font-bold'>{item.name}</p>
             <div className='flex gap-4'>
               <p>Quantity: {item.quantity}</p>
-              <p>Price: {item.price}</p>
+              <p>Price: {formatPrice(item.price)}</p>
             </div>
           </div>
           <div className='flex gap-2 md-max-3:gap-4 md-max-3:my-4'>
@@ -64,7 +83,7 @@ const CartBar = ({ cartItems =[], setCartItems, increaseQuantity, decreaseQuanti
             onClick={() => removeFromCart(index)}><FiTrash size={18} /></button> {/* Button to remove the item */}
 
           </div>
-          <p className='md-max-3:font-bold text-center'>{item.totalPrice}</p>
+          <p className='md-max-3:font-bold text-center'>{formatPrice(item.totalPrice)}</p>
         </div>
         ))}
         {

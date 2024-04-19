@@ -71,6 +71,26 @@ const ProductPayment = ({cartItems=[], setCartItems, totalPrice, setTotalPrice, 
     setUsePoints(newValue);
     // Do something with the new value if needed
   };
+
+  const formatPrice = (price) => {
+    // Convert price to string
+    const priceString = price.toString();
+    
+    // Split the price into integer and decimal parts
+    const [integerPart, decimalPart] = priceString.split('.');
+    
+    // Pad the decimal part with zeroes to ensure three decimal places
+    const paddedDecimalPart = decimalPart ? decimalPart.padEnd(3, '0') : '000';
+    
+    // Format integer part with 'Rp' prefix and thousand separators
+    const formattedIntegerPart = 'Rp' + parseInt(integerPart).toLocaleString();
+    
+    // Combine formatted integer part with padded decimal part
+    const formattedPrice = formattedIntegerPart + '.' + paddedDecimalPart;
+    
+    return formattedPrice;
+    };
+
   const totalPriceSum = cartItems.reduce((acc, item) => acc + item.totalPrice, 0);
   return (
     <div className='flex-1 w-full flex gap-8 flex-col md-max-3:flex-col-reverse'>
@@ -90,7 +110,7 @@ const ProductPayment = ({cartItems=[], setCartItems, totalPrice, setTotalPrice, 
             <p className='font-bold'>{item.name}</p>
             <div className='flex gap-4'>
               <p>Quantity: {item.quantity}</p>
-              <p>Price: {item.price}</p>
+              <p>Price: {formatPrice(item.price)}</p>
             </div>
           </div>
           <div className='flex gap-2 md-max-3:gap-4 md-max-3:my-4'>
@@ -159,7 +179,7 @@ const ProductPayment = ({cartItems=[], setCartItems, totalPrice, setTotalPrice, 
           <p>Oder Value</p>
           {
             cartItems.map((data)=>(
-              <div className='font-bold'>{totalPriceSum}</div>
+              <div className='font-bold'>{formatPrice(totalPriceSum)}</div>
             ))
           }
           </div>
@@ -168,14 +188,14 @@ const ProductPayment = ({cartItems=[], setCartItems, totalPrice, setTotalPrice, 
           </div>
           <div className='flex justify-between items-center py-4 border-b-2 border-black'>
             <p>Order value </p>
-            <p className='font-bold'>{totalPriceSum*2/3}</p>
+            <p className='font-bold'>{formatPrice(totalPriceSum*2/3)}</p>
           </div>
           <div className='font-heading_1 text-[20px] font-bold'>
             Shipping costs
           </div>
           <div className='flex justify-between items-center py-4 border-b-2 border-black'>
           <p>Shipping fee</p>
-          <p className='font-bold'>{totalPriceSum*1/200}</p>
+          <p className='font-bold'>{formatPrice(totalPriceSum*1/200)}</p>
           </div>
           <div className='font-heading_1 text-[20px] font-bold'>
             Use existing points
@@ -190,7 +210,7 @@ const ProductPayment = ({cartItems=[], setCartItems, totalPrice, setTotalPrice, 
           </div>
           <div className='flex justify-between items-center py-4'>
             <p className='font-bold'>Total Payment Code</p>
-            <p className='font-bold'>{totalPriceSum + totalPriceSum*1/200  - (usePoints ? 100 : 0) }</p>
+            <p className='font-bold'>{formatPrice(totalPriceSum + totalPriceSum*1/200  - (usePoints ? 100 : 0))}</p>
           </div>
       </div>
       </div>
