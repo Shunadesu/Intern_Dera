@@ -15,13 +15,16 @@ const [username, setUsername] = useState(localStorage.getItem('username'));
   return (
     <div>
     {username ? (
-      <div className='flex gap-2 justify-center items-center'>
-        <MdOutlineExitToApp size={40} onClick={handleLogout} className='hover:text-[#658C4A] cursor-pointer'/> 
+      <div className='flex gap-2 justify-center items-center text-[40px]
+      md-max-3:text-[30px] md-max-4:text-[24px]
+      '>
+        <MdOutlineExitToApp onClick={handleLogout} className='hover:text-[#658C4A] cursor-pointer'/> 
         <p>Hello, {username}</p>
       </div>
     ) : (
-      <Link to={path.LOGIN} className='hover:text-[#658C4A] cursor-pointer'>
-        <CiUser size={40}/>
+      <Link to={path.LOGIN} className='hover:text-[#658C4A] cursor-pointer text-[40px]
+      md-max-3:text-[30px] md-max-4:text-[24px]'>
+        <CiUser/>
       </Link>
     )}
     {username && show && <div>Your content here...</div>}

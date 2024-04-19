@@ -11,10 +11,18 @@ import path from '../Ulities/path'
 const HomeBar = ({selectedProduct, cartItems=[], setCartItems, totalPrice, setTotalPrice, quantity, setQuantity, handleQuantityChange, addToCart, id, increaseQuantity}) => {
 
   return (
-    <div className='w-full flex bg-white px-16 py-8 justify-between items-center relative'>
+    <div className='w-full flex bg-white px-16 py-8 justify-between items-center relative
+    md-max-4:px-8
+    '>
         
         <Link to={path.HOME}>
-          <img src={logodera} alt="" className='w-[100px] h-[50px] object-cover'/>
+          <div className='w-[100px] h-[50px]
+          '>
+            <img src={logodera} alt="" className='w-full h-full object-cover
+            md-max-3:object-contain
+            md-max-3:w-[50px]
+            '/>
+          </div>
         </Link>
         <SearchBar />
         <div className='flex gap-6'>

@@ -57,7 +57,9 @@ const Navbar = () => {
         <div 
         onClick={()=>setShowNav(!showNav)}
         className='hidden
-        md-max-2:flex md-max-2:items-center md-max-2:justify-end bg-white px-16 my-4 text-[18px] w-full
+        md-max-2:flex md-max-2:items-center md-max-2:justify-end bg-white px-16
+        md-max-4:px-8
+        my-4 text-[18px] w-full
         '>
             <div className='p-4 bg-white rounded-2xl hover:bg-[#658c4a] hover:text-white transition-all duration-500'>
                 <GiHamburgerMenu size={20}/>

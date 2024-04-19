@@ -28,15 +28,18 @@ return formattedPrice;
     '>
         {
            productData.map((product) => (
-            <div key={product.id} className='w-[380px]
+            <div key={product.id} className='
+            w-[380px]
                 md-max:w-[280px]
                 md-max-4:w-[220px]
+                md-max-5:w-[150px]
                 flex flex-col gap-3'>
                 <div className='w-[380px] h-[380px] 
                 md-max:w-[280px] md-max:h-[280px]
                 md-max-2:w-[200px] md-max-2:h-[200px]
                 md-max-3:w-[300px] md-max-3:h-[300px]
                 md-max-4:w-[220px] md-max-4:h-[220px]
+                md-max-5:w-[150px] md-max-5:h-[150px]
                 '>
                     <img src={product.img} alt={product.name} className='w-full h-full object-cover rounded-md' />  
                 </div>

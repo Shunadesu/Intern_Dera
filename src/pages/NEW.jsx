@@ -59,7 +59,9 @@ const NEW = () => {
   return (
     <>
     <div className='w-full bg-[#658C4A] h-[60px] p-4 flex justify-center items-center text-white gap-2'>
-      <p className='text-[16px]'>Free Shipping with minimum purchase Rp250.000</p>
+      <p className='text-[16px]
+      md-max-4:text-[14px]
+      '>Free Shipping with minimum purchase Rp250.000</p>
       <IoIosArrowRoundForward size={30} className='font-bold'/>
     </div>
     <>
@@ -75,19 +77,26 @@ const NEW = () => {
           <div className='flex w-[800px] 
           md-max-2:w-[600px]
           md-max-3:w-[480px]
+          md-max-4:w-[380px]
+          md-max-5:w-[380px]
           
           relative bg-white rounded-2xl shadow-lg'>
             <div className='w-[500px] h-[500px]
-            md-max-2:w-[380px] md-max-2:h-[380px]
-            md-max-3:w-[300px] md-max-3:h-[300px]
-            '>
+            md-max-2:w-[380px] md-max-2:h-[330px]
+            md-max-3:w-[330px] md-max-3:h-[280px]
+            md-max-4:w-[350px] md-max-4:h-[250px]
+             '>
             <img src={popup} alt="" className='w-full h-full object-cover rounded-tl-2xl rounded-bl-2xl'/>
             </div>
             <div className='flex flex-col gap-4 justify-center items-center text-center px-8'>
-              <h1 className='font-heading_1 text-[20px] font-bold'> Get 15% off </h1>
-              <p className='text-[#666666]'>On your initial purchase of our chosen products</p>
+              <h1 className='font-heading_1 text-[20px]
+              md-max-4:text-[18px]
+              font-bold'> Get 15% off </h1>
+              <p className='text-[#666666] md-max-4:text-[16px]'>On your initial purchase of our chosen products</p>
               <Link to={path.NEWS}>
-                  <div className='text-[#658C4A] text-[18px] cursor-pointer font-semibold rounded-full px-4 py-2 border border-[#E7CEC0] bg-[#E7CEC0]
+                  <div className='text-[#658C4A] text-[18px]
+                  md-max-4:text-[16px]
+                  cursor-pointer font-semibold rounded-full px-4 py-2 border border-[#E7CEC0] bg-[#E7CEC0]
                   hover:bg-[#658C4a] hover:text-[#E7CEC0]
                   transition-all duration-500
                   '>Show Now</div>
@@ -106,7 +115,6 @@ const NEW = () => {
       </div>
       } 
       </>
-
       <div className='fixed bottom-10 right-10 z-[1000]'>
         <div className='flex flex-col gap-4'>
           <div 

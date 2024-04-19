@@ -14,6 +14,7 @@ module.exports = {
         'md-max-2': {'max': '1200px'},
         'md-max-3': {'max': '900px'},
         'md-max-4': {'max': '680px'},
+        'md-max-5': {'max': '450px'},
       },
     },
   },

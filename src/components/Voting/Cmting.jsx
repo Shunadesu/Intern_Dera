@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import VotingData from '../../Ulities/data/VotingData'
 import icons from '../../Ulities/icons'
 const Cmting = () => {
 const {FaStar, BiLike} = icons
 
+const [lineclimb, setlineClimb] = useState(true)
   return (
+
     <div className='flex flex-col gap-8'>
         {
             VotingData.map((data) =>
@@ -25,7 +27,9 @@ const {FaStar, BiLike} = icons
                         </div>
                     </div>
                     <div>
-                        <p className='text-[#191919]'>{data.comment}</p>
+                        <p 
+                        onClick={()=>setlineClimb(!lineclimb)}
+                        className={`text-[#191919] md-max-3:${lineclimb ? 'line-clamp-3' : ''}`}>{data.comment}</p>
                     </div>
                     <div className='flex justify-start'>
                         <div className='flex items-center justify-center gap-6'>

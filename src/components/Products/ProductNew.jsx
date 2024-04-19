@@ -75,9 +75,11 @@ const ProductNew = ({ sliderRef }) => {
             <Link to={`/news/${product.id}`} key={product.id} className='
             w-[300px] flex flex-col gap-4
             md-max-3:w-[180px]
+            md-max-4:w-[150px]
             '>
               <div className='w-[300px] h-[300px] 
               md-max-3:w-[180px] md-max-3:h-[180px]
+              md-max-4:w-[150px] md-max-4:h-[150px]
               '>
                   <img src={product.img} alt={product.name} className='w-full h-full object-cover rounded-md' />
               </div>

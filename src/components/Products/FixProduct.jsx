@@ -6,7 +6,8 @@ const FixProduct = ({selectedProduct}) => {
   return (
     <div className='px-24 flex flex-col gap-4 w-full
     md-max:px-20
-    md-max-2:px-16    
+    md-max-2:px-16 
+    md-max-5:px-8   
     '>
         <h1 className='text-[#333333] text-[24px] font-bold'>Description</h1>
         <p className='text-[16px] leading-7'>
@@ -15,7 +16,7 @@ const FixProduct = ({selectedProduct}) => {
         <p className='text-[16px] leading-7'>
             Purposefully designed for unparalleled relaxation, the <strong>{name}</strong> boasts a meticulously contoured seat and backrest, meticulously engineered to provide optimal support for extended lounging sessions outdoors. Its ergonomic design cradles the body, offering a sanctuary of comfort whether you're unwinding in your garden or basking in the sun on your patio.
         </p>
-        <div className='w-full h-[600px]'>
+        <div className='w-full h-[600px] md-max-2:h-[500px] md-max-4:h-[400px] md-max-5:h-[300px]'>
             <img src={img} alt="" className='w-full h-full object-cover' />
         </div>
         <p className='text-[16px] leading-7'>

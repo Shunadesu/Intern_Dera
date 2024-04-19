@@ -67,18 +67,21 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
         md-max-2:flex-col
         md-max-3:gap-6
         md-max-4:gap-4
+        md-max-5:gap-2 md-max-5:px-8
         '>
             <div className='flex flex-col md-max-2:justify-center md-max-2:items-center md-max-2:m-auto flex-1 gap-4 p-4 
             w-[600px]
             md-max:w-[480px]
             md-max-2:w-[600px]    
-            md-max-3:w-[420px] md-max-3:gap-0  
+            md-max-3:w-[420px] md-max-3:gap-0 
+            md-max-5:w-[300px] 
             justify-center items-center'>
                 <div className='w-full flex justify-center items-center'>
                     <div className='w-[500px] h-[500px]
                     md-max:w-[400px] md-max:h-[400px]
                     md-max-2:w-[600px] md-max-2:h-[600px]
                     md-max-3:w-[420px] md-max-3:h-[420px]
+                    md-max-5:w-[300px] md-max-5:h-[300px]
                     '>
                         <img src={img} alt="" className='w-full h-full object-cover' />
                     </div>
