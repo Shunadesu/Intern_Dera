@@ -19,7 +19,7 @@ const [username, setUsername] = useState(localStorage.getItem('username'));
       md-max-3:text-[30px] md-max-4:text-[24px]
       '>
         <MdOutlineExitToApp onClick={handleLogout} className='hover:text-[#658C4A] cursor-pointer'/> 
-        <p>Hello, {username}</p>
+        <p className='text-[18px] md-max-2:text-[16px] md-max-4:text-[14px]' >Hello, {username}</p>
       </div>
     ) : (
       <Link to={path.LOGIN} className='hover:text-[#658C4A] cursor-pointer text-[40px]

@@ -21,7 +21,7 @@ const CartBar = ({ cartItems =[], setCartItems, increaseQuantity, decreaseQuanti
   return (
     <div>
     
-      <div className='z-[999] absolute top-0 right-0 h-[100vh] w-[700px] md-max-2:w-[600px] md-max-3:w-[500px] bg-white px-12 border-2 border-l-[#658c4a] border-b-[#658c4a]'>
+      <div className='z-[999] absolute top-0 right-0 h-[200vh] w-1/2 md-max-2:w-[600px] md-max-3:w-[500px] md-max-4:w-[350px] bg-white px-12 border-2 border-l-[#658c4a] border-b-[#658c4a]'>
         <div className='flex justify-between items-center my-4 py-4 border-b-2 border-[#685c]'>
           <h2 className='font-bold text-[24px]'>Shopping Bag</h2>
           <div
@@ -34,15 +34,21 @@ const CartBar = ({ cartItems =[], setCartItems, increaseQuantity, decreaseQuanti
         </div>
         {cartItems.map((item, index) => (
         <div 
-        className='flex justify-between items-center my-6'
+        className='
+        w-full gap-12
+        my-6
+        grid grid-cols-3
+        items-center md-max-3:my-6 md-max-3:flex md-max-3:flex-col'
         key={index}> 
-          <div>
+          <div className=''>
             <p className='font-bold'>{item.name}</p>
             <div className='flex gap-4'>
               <p>Quantity: {item.quantity}</p>
               <p>Price: {item.price}</p>
             </div>
           </div>
+          <div className='flex gap-2 md-max-3:gap-4 md-max-3:my-4'>
+
             <button
             className='px-4 py-2 border-[#685c] border rounded-full text-[20px] text-[#685c]
             hover:border-white hover:text-white hover:bg-[#685c]
@@ -56,7 +62,9 @@ const CartBar = ({ cartItems =[], setCartItems, increaseQuantity, decreaseQuanti
             className='px-4 py-2 border-[#685c] border rounded-full text-[20px] text-[#685c]
             hover:border-white hover:text-white hover:bg-[#685c]'
             onClick={() => removeFromCart(index)}><FiTrash size={18} /></button> {/* Button to remove the item */}
-            <p>{item.totalPrice}</p>
+
+          </div>
+          <p className='md-max-3:font-bold text-center'>{item.totalPrice}</p>
         </div>
         ))}
         {

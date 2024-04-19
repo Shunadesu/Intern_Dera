@@ -24,8 +24,13 @@ const HomeBar = ({selectedProduct, cartItems=[], setCartItems, totalPrice, setTo
             '/>
           </div>
         </Link>
-        <SearchBar />
-        <div className='flex gap-6'>
+        <div className='block md-max-4:hidden'>
+            <SearchBar/>
+        </div>
+        <div className='flex gap-6 md-max-3:gap-4 justify-center items-center'>
+          <div className='hidden md-max-4:block'>
+              <SearchBar/>
+          </div>
             <User />
             <Cart
               selectedProduct={selectedProduct}

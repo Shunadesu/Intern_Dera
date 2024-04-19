@@ -12,7 +12,7 @@ const ShopBanner = () => {
         />
          <div className="absolute inset-0 bg-[#658C4A] opacity-80"></div>
          <div className="absolute inset-0 flex flex-col gap-16 items-center justify-center font-heading_1 px-24
-         md-max-2:px-16
+         md-max-2:px-16 md-max-2:gap-8 md-max-2:py-8
          md-max-4:px-8
          ">
             <h1 className="text-white text-[35px]

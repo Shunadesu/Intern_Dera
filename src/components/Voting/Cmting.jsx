@@ -29,7 +29,7 @@ const [lineclimb, setlineClimb] = useState(true)
                     <div>
                         <p 
                         onClick={()=>setlineClimb(!lineclimb)}
-                        className={`text-[#191919] md-max-3:${lineclimb ? 'line-clamp-3' : ''}`}>{data.comment}</p>
+                        className={`text-[#191919] ${lineclimb ? ' md-max-3:line-clamp-3' : ''}`}>{data.comment}</p>
                     </div>
                     <div className='flex justify-start'>
                         <div className='flex items-center justify-center gap-6'>

@@ -37,6 +37,7 @@ const Slider = () => {
             md-max:gap-4
             md-max-3:border-2 md-max-3:border-[#658C4A] md-max-3:py-6 md-max-3:mx-16 md-max-3:bg-white
             md-max-3:rounded-3xl
+            md-max-4:px-8
             '>
                 <h1 className='text-[62px] pr-8 font-bold font-heading_1
                 md-max:text-[50px]
@@ -51,7 +52,7 @@ const Slider = () => {
                 to={path.NEWS}
                 className='bg-[#658C4A] 
                 transition-all duration-500
-                border border-white w-[200px] text-white p-4 rounded-full text-[20px] text-center font-semibold hover:bg-white hover:text-[#658C4A] hover:border hover:border-[#658C4A] cursor-pointer'>Learn More</Link>                
+                border border-white w-[200px] md-max-4:w-[170px] text-white p-4 rounded-full text-[20px] md-max-4:text-[18px] text-center font-semibold hover:bg-white hover:text-[#658C4A] hover:border hover:border-[#658C4A] cursor-pointer'>Learn More</Link>                
             </div>
         </div>
 

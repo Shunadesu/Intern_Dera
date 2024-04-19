@@ -73,38 +73,45 @@ const ProductPayment = ({cartItems=[], setCartItems, totalPrice, setTotalPrice, 
   };
   const totalPriceSum = cartItems.reduce((acc, item) => acc + item.totalPrice, 0);
   return (
-    <div className='flex-1 w-full flex gap-8 flex-col'>
+    <div className='flex-1 w-full flex gap-8 flex-col md-max-3:flex-col-reverse'>
       <div className='p-8 bg-white rounded-2xl flex flex-col gap-4'>
         <div className='font-heading_1 text-[28px] font-bold'>
           Product
         </div>
-        {
-          cartItems.map((item, index) => (
-            <div 
-            className='flex justify-between items-center my-6'
-            key={index}> 
-              <div>
-                <p className='font-bold'>{item.name}</p>
-                <div className='flex gap-4'>
-                  <p>Quantity: {item.quantity}</p>
-                  <p>Price: {item.price}</p>
-                </div>
-              </div>
-              <button
-              className='px-4 py-2 border-[#685c] border rounded-full text-[20px] text-[#685c]
-              hover:border-white hover:text-white hover:bg-[#685c]
-              '
-              onClick={() => increaseQuantity(index)}><FiPlus size={18} /></button>
-              <button
-              className='px-4 py-2 border-[#685c] border rounded-full text-[20px] text-[#685c]
-              hover:border-white hover:text-white hover:bg-[#685c]'
-              onClick={() => decreaseQuantity(index)}><FiMinus size={18} /></button>
-              <button 
-              className='px-4 py-2 border-[#685c] border rounded-full text-[20px] text-[#685c]
-              hover:border-white hover:text-white hover:bg-[#685c]'
-              onClick={() => removeFromCart(index)}><FiTrash size={18} /></button> {/* Button to remove the item */}
-              <p>{item.totalPrice}</p>              
+        {cartItems.map((item, index) => (
+        <div 
+        className='
+        w-full gap-12
+        my-6
+        grid grid-cols-3
+        items-center md-max-2:my-4 md-max-2:flex md-max-2:flex-col'
+        key={index}> 
+          <div className=''>
+            <p className='font-bold'>{item.name}</p>
+            <div className='flex gap-4'>
+              <p>Quantity: {item.quantity}</p>
+              <p>Price: {item.price}</p>
+            </div>
           </div>
+          <div className='flex gap-2 md-max-3:gap-4 md-max-3:my-4'>
+
+            <button
+            className='px-4 py-2 border-[#685c] border rounded-full text-[20px] text-[#685c]
+            hover:border-white hover:text-white hover:bg-[#685c]
+            '
+            onClick={() => increaseQuantity(index)}><FiPlus size={18} /></button>
+            <button
+            className='px-4 py-2 border-[#685c] border rounded-full text-[20px] text-[#685c]
+            hover:border-white hover:text-white hover:bg-[#685c]'
+            onClick={() => decreaseQuantity(index)}><FiMinus size={18} /></button>
+            <button 
+            className='px-4 py-2 border-[#685c] border rounded-full text-[20px] text-[#685c]
+            hover:border-white hover:text-white hover:bg-[#685c]'
+            onClick={() => removeFromCart(index)}><FiTrash size={18} /></button> {/* Button to remove the item */}
+
+          </div>
+          <p className='md-max-3:font-bold text-center'>Total: {item.totalPrice}</p>
+        </div>
         ))}
         {
             cartItems.length ? 

@@ -48,7 +48,7 @@ const Payment = () => {
   return (
     <>
       <div className='w-full bg-[#658C4A] h-[60px] p-4 flex justify-center items-center text-white gap-2'>
-        <p className='text-[16px]'>Free Shipping with minimum purchase Rp250.000</p>
+        <p className='text-[16px] md-max-4:text-[14px]'>Free Shipping with minimum purchase Rp250.000</p>
         <IoIosArrowRoundForward size={30} className='font-bold'/>
       </div>
       <div className='w-full max-w-[2000px] flex flex-col m-auto relative'>

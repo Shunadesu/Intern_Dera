@@ -9,7 +9,7 @@ const Login = () => {
   return (
     <div className=''>
       <div className='flex justify-center items-center px-4 h-[100vh] w-full relative'>
-        <img src={banner} alt="" className='absolute top-0 bottom-0 w-full h-full'/>
+        <img src={banner} alt="" className='absolute top-0 bottom-0 w-full h-full object-cover'/>
         <div className='flex px-4 gap-3 justify-center items-center relative'>
           <div 
               onClick={()=> navigate("/")}
