@@ -74,7 +74,7 @@ const ProductPayment = ({cartItems=[], setCartItems, totalPrice, setTotalPrice, 
   const totalPriceSum = cartItems.reduce((acc, item) => acc + item.totalPrice, 0);
   return (
     <div className='flex-1 w-full flex gap-8 flex-col md-max-3:flex-col-reverse'>
-      <div className='p-8 bg-white rounded-2xl flex flex-col gap-4'>
+      <div className='p-8 bg-white rounded-2xl flex flex-col gap-4 shadow-lg'>
         <div className='font-heading_1 text-[28px] font-bold'>
           Product
         </div>
@@ -134,7 +134,7 @@ const ProductPayment = ({cartItems=[], setCartItems, totalPrice, setTotalPrice, 
             </div>
           }
       </div>
-      <div  className='p-8 bg-white rounded-2xl flex flex-col gap-4'>
+      <div  className='p-8 bg-white rounded-2xl flex flex-col gap-4 shadow-lg'>
         <div className='flex justify-center flex-col gap-4'>
           <label htmlFor='pcode' className='font-heading_1 text-[28px] font-bold'>
             Promotional Code 
@@ -150,7 +150,7 @@ const ProductPayment = ({cartItems=[], setCartItems, totalPrice, setTotalPrice, 
           </select>
         </div>
       </div>
-      <div  className='p-8 bg-white rounded-2xl flex flex-col gap-4'>
+      <div  className='p-8 bg-white rounded-2xl flex flex-col gap-4 shadow-lg'>
       <div className='flex justify-center flex-col gap-2'>
           <div className='font-heading_1 text-[28px] font-bold'>
             Oder Details

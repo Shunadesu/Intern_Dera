@@ -51,7 +51,7 @@ const {
 } = icons
 
   return (
-    <div className='flex-1 md-max-3:w-full p-8 bg-white rounded-2xl flex flex-col gap-4'>
+    <div className='flex-1 md-max-3:w-full p-8 bg-white rounded-2xl flex flex-col gap-4 shadow-lg'>
       <div className='font-heading_1 text-[28px] md-max-3:text-[24px] font-bold'>
         Account Information
       </div>
