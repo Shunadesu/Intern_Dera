@@ -24,12 +24,13 @@ return formattedPrice;
   return (
     <div className='flex gap-4 w-full justify-between
         md-max-3:grid md-max-3:grid-cols-2
-
+        justify-items-center
     '>
         {
            productData.map((product) => (
             <div key={product.id} className='
             w-[380px]
+            justify-items-center
                 md-max:w-[280px]
                 md-max-4:w-[220px]
                 md-max-5:w-[150px]

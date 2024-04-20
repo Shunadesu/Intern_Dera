@@ -15,7 +15,7 @@ const Navbar = () => {
             <div>
                 <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 z-[200]"></div>
                 <div className='w-full h-[700px] z-[999] flex bg-white py-16 justify-start text-[18px]
-                absolute flex-col right-0 top-0 border-2 border-l-[#658C4A] border-b-[#658C4A]
+                fixed flex-col right-0 top-0 border-2 border-l-[#658C4A] border-b-[#658C4A]
                 '>
                     {
                         navdata.map((nav)=>(
