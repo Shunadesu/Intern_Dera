@@ -29,7 +29,7 @@ const Slider = () => {
       || pathname === path.HOMEGOODS
       || pathname === path.FURNITURE
       || pathname === path.BEDDING
-      ? 'border-t-0' : 'border-t-2 border-[#658C4A]'}
+      ? 'border-t-0' : 'border-t border-[#658C4A]'}
     `}>
       
         <div className='flex-1 flex justify-center items-center '>
