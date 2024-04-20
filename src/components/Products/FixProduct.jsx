@@ -6,8 +6,9 @@ const FixProduct = ({selectedProduct}) => {
   return (
     <div className='px-24 flex flex-col gap-4 w-full
     md-max:px-20
-    md-max-2:px-16 
-    md-max-5:px-8   
+    md-max-2:px-16
+    md-max-4:px-8 
+    md-max-5:px-4   
     '>
         <h1 className='text-[#333333] text-[24px] font-bold'>Description</h1>
         <p className='text-[16px] leading-7'>

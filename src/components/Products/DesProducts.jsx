@@ -74,14 +74,14 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
             md-max:w-[480px]
             md-max-2:w-[600px]    
             md-max-3:w-[420px] md-max-3:gap-0 
-            md-max-5:w-[300px] 
+            md-max-5:w-[250px] 
             justify-center items-center'>
                 <div className='w-full flex justify-center items-center'>
                     <div className='w-[500px] h-[500px]
                     md-max:w-[400px] md-max:h-[400px]
                     md-max-2:w-[600px] md-max-2:h-[600px]
                     md-max-3:w-[420px] md-max-3:h-[420px]
-                    md-max-5:w-[300px] md-max-5:h-[300px]
+                    md-max-5:w-[250px] md-max-5:h-[250px]
                     '>
                         <img src={img} alt="" className='w-full h-full object-cover' />
                     </div>
@@ -98,6 +98,7 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
                     md-max-2:w-[400px]
                     md-max-3:w-[300px]
                     md-max-4:w-[260px]
+                    md-max-5:w-[200px]
                     '>
                         <Slider ref={sliderRef} {...settings}>
                             <div className='h-[200px] px-2' >
@@ -165,12 +166,12 @@ const DesProducts = ({selectedProduct, totalPrice, quantity, handleQuantityChang
                             {formatPrice(price)}
                         </div>
                         <div  className='text-[16px] text-[#191919]'>
-                            Save: {formatPrice(price*(1-0.5))}
+                            Save: {formatPrice(price)}
                         </div>
                     </div>
                     <div className='text-[16px] text-[#191919]'>
                         <del>
-                            {formatPrice(price*(1+0.5))}
+                            {formatPrice(price*2)}
                         </del>                    
                     </div>
                 </div>

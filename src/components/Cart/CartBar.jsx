@@ -39,7 +39,7 @@ const CartBar = ({ cartItems =[], setCartItems, increaseQuantity, decreaseQuanti
     const {FiTrash, FiPlus, FiMinus, MdClose, MdSunny} = icons
   return (
     <div>
-    
+    <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 z-[200]"></div>
       <div className='z-[999] absolute top-0 right-0 h-[200vh] w-1/2 md-max-2:w-[600px] md-max-3:w-[500px] md-max-4:w-[350px] bg-white px-12 border-2 border-l-[#658c4a] border-b-[#658c4a]'>
         <div className='flex justify-between items-center my-4 py-4 border-b-2 border-[#685c]'>
           <h2 className='font-bold text-[24px]'>Shopping Bag</h2>

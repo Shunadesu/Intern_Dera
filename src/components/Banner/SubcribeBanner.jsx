@@ -45,7 +45,7 @@ const SubcribeBanner = () => {
         <div className='h-[800px] md-max-2:h-[700px] md-max-3:h-[580px] md-max-4:h-[400px] relative flex '>
             <img src={banner} alt="" className='w-full h-full object-cover'/>
             <div className='absolute bottom-0 left-0 p-24 md-max-3:p-16 md-max-4:p-8'>
-                <div className=' w-[650px] md-max-2:w-[500px] md-max-3:w-[450px] md-max-4:w-[400px] md-max-5:w-[380px] bg-white p-12
+                <div className=' w-[650px] md-max-2:w-[500px] md-max-3:w-[450px] md-max-4:w-[400px] md-max-5:w-[250px] bg-white p-12
                 md-max-2:p-8 
                 md-max-4:p-4
                 rounded-3xl flex flex-col gap-4 '>
@@ -87,7 +87,7 @@ const SubcribeBanner = () => {
                             md-max-4:right-[3.2rem]
                             md-max-2:text-[18px]
                             md-max-3:text-[16px]
-                            right-[9rem]" 
+                            right-[9.5rem]" 
                             type="submit">
                             Subscribe
                             </button>

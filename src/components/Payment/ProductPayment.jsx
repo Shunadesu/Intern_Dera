@@ -177,11 +177,9 @@ const ProductPayment = ({cartItems=[], setCartItems, totalPrice, setTotalPrice, 
           </div>
           <div className='flex justify-between items-center py-4 border-b-2 border-black my-2'>
           <p>Oder Value</p>
-          {
-            cartItems.map((data)=>(
+
               <div className='font-bold'>{formatPrice(totalPriceSum)}</div>
-            ))
-          }
+
           </div>
           <div className='font-heading_1 text-[20px] font-bold'>
             After using the discount code

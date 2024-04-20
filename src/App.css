@@ -17,3 +17,11 @@ input[type=number]::-webkit-outer-spin-button {
 input:focus {
   outline-color: #658C4A;
 }
+
+.green-hover:hover {
+  filter: grayscale(100%) hue-rotate(120deg);
+}
+
+.filter-green:hover {
+  filter: none;
+}
