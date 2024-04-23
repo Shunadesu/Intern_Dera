@@ -26,6 +26,8 @@ const [username, setUsername] = useState(localStorage.getItem('username'));
           onClick={handleLogout}
           className='text-[18px] absolute -bottom-4 border px-4 py-2 cursor-pointer
           hover:text-white hover:bg-[#658c4a] transition-all duration-400 hover:font-semibold
+          md-max-2:text-[16px]
+          md-max-4:text-[14px]
           '>Logout</div>
         } 
       </div>

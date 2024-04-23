@@ -55,7 +55,7 @@ const removeFromCart = (index) => {
 };
 
   return (
-    <div >
+    <div className='transition-all duration-300' >
        
             {/* Other component content */}
             <button 
