@@ -12,7 +12,7 @@ const HomeBar = ({selectedProduct, cartItems=[], setCartItems, totalPrice, setTo
 
   return (
     <div className='w-full flex bg-white px-16 py-8 justify-between items-center relative
-    md-max-4:px-8
+    md-max-4:px-8 md-max-4:py-0
     '>
         
         <Link to={path.HOME}>
